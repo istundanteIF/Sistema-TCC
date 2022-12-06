@@ -1,0 +1,237 @@
+.main-content {
+	padding: 10px 10px 0 10px;
+	margin: 10px 5px;
+}
+
+.content-tab {
+	margin: 5px;
+	font-family: open sans,sans-serif !important;
+	box-sizing: border-box;
+}
+
+.content-ul {
+	border-bottom: 1px solid #212121;
+    margin: 0;
+    padding: 0;
+}
+
+.content-list {
+	color: #FFF;
+	background-color: #212121;
+	padding: 0 18px;
+	border-radius: 15px 15px 0 0;
+	border-bottom: 0;
+    cursor: pointer;
+    display: inline-block;;
+    text-align: center;
+    list-style-type: none;
+}
+
+#content-list-add {
+	padding: 0 !important;
+	width: 24px !important;
+	height: 24px !important;
+	border-radius: 15px !important;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' -25,
+  'opsz' 20
+}
+
+.content-card {
+    border-left: 1px solid #212121;
+    border-right: 1px solid #212121;
+    border-bottom: 1px solid #212121;
+    width: 100%;
+    min-height: 600px;
+    text-align: center;
+    padding-bottom: 90px;
+}
+
+.card-project {
+	width: 100%;
+    max-width: 300px;
+    margin: 20px 20px 0;
+    padding: 0;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    text-align: left;
+}
+
+.card-project-bar {
+    position: absolute;
+    width: calc(100% - 2px);
+    height: 10px;
+    top: 1px;
+    left: 1px;
+    background-color: #c5c2c3;
+}
+
+.dropdown-button {
+	position: absolute;
+    top: 0;
+    right: 0;
+    color: rgba(0,0,0,.5);
+    padding-top: 10px;
+    background: 0 0;
+    cursor: pointer;
+    border: 0;
+}
+
+.dropdown-button-l {
+	position: absolute;
+    top: 0;
+    right: 0;
+    color: rgba(0,0,0,.5);
+    padding-top: 10px;
+    padding-right: 20px;
+    background: 0 0;
+    cursor: pointer;
+    border: 0;
+}
+
+.card-project-header {
+	margin: 1px;
+    max-height: 98px;
+    padding: 15px 15px 10px;
+    overflow: hidden;
+    color: rgba(0,0,0,.9);
+}
+
+.card-project-link {
+	color: transparent !important;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.h2-card {
+	font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+	color: #212121;
+    display: inline-block;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.span-card {
+	margin-top: 4px;
+    display: inline;
+    line-height: 1;
+    text-align: left;
+    font-size: inherit;
+    font-weight: 400;
+    color: rgba(0,0,0,.6);
+}
+
+.card-project-body {
+	min-height: 10px;
+    padding: 15px;
+    margin: 0;
+    overflow: hidden;
+    background-color: rgba(230,230,230,.5);
+    border-top: 1px solid #c5c2c3;
+    border-bottom: 1px solid #c5c2c3;
+}
+
+.progress-bar-color {
+	border-radius: 4px;
+	background-color: #b1ff75;
+	height: 10px;
+}
+
+.progress-text {
+	width: 50% !important;
+	padding: 2px 0;
+	float: left;
+    text-align: left;
+    font-size: .8rem;
+    margin-top: 2px;
+    padding-left: 1px;
+}
+
+#done {
+	color: #212121;
+	font-weight: bold;
+}
+
+#pending {
+	color: #212121;
+	text-align: right !important;
+    padding-right: 2px;
+}
+
+.progress-bar:after {
+	content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid #c5c2c3;
+    margin: 8px;
+}
+
+.project-body-text {
+	font-size: .8rem;
+    margin: 14px 0 0;
+    color: #3b3b3b;
+    text-align: center;
+}
+
+.project-body-autor {
+	font-size: .8rem;
+    margin: 8px 0 0;
+    color: #3b3b3b;
+    text-align: left;
+}
+
+p {
+    word-wrap: break-word;
+    word-break: normal;
+}
+
+.project-body-autor-lb {
+	font-weight: 600;
+}
+
+.project-body-orientador {
+	font-size: .8rem;
+    margin: 4px 0 0;
+    color: #3b3b3b;
+    text-align: left;
+}
+
+.project-body-orientador-lb {
+	font-weight: 600;
+}
+
+.project-card-footer {
+	margin: 1px;
+    padding: 7px 15px 13px;
+    background-color: rgba(197,194,195,.4);
+}
+
+.project-card-info {
+	display: inline-block;
+    width: calc(100% - 14px);
+    font-size: .75rem;
+    color: #848484;
+    text-align: left;
+    line-height: 1.2;
+    vertical-align: bottom;
+}
+
+.project-card-lb {
+	display: block;
+}

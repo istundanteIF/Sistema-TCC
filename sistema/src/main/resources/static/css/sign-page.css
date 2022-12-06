@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body {
+margin: 0;
+   font-family: 'Noto Sans', sans-serif;
+ }
+
+ body * {
+    box-sizing: border-box;
+ }
+
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background: f0ffffde;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+}
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login >h1 {
+    color: #77ffc0;
+    font-size: 3vw;
+}
+
+.left-login-image{
+    width: 30vw;
+}
+
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-cadastro{
+    color: #00ff88;
+}
+
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #273339;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+  
+
+.card-login > h1{
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+}
+
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #273339;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+.textfield > label{
+    color: #f0ffffde;
+    margin-bottom: 10px;
+    margin: 10px 0px;
+}
+
+.textfield > input::placeholder{
+    color: #f0ffff94;
+
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px 12px #00ff8052;
+
+}
+
+a {
+    color: #00ff88;
+    font-weight: 800;
+    border: none;
+    text-decoration: none;
+}
+
+#light-mode-input{
+    display: none;
+}
+
+.light-mode-toggler{
+    position: absolute;
+    width: 38px;
+    height: 20px;
+    background: #2f2842;
+    border: 2px solid #110b1340;
+    border-radius: 15px;
+    right: 10px;
+    transition: all 300ms ease-in-out;
+}
+
+#light-mode-input:checked ~ .main-login {
+    background-color: #201b2c;
+    transition: all 300ms ease-in-out;
+}
+
+#light-mode-input:checked ~ .card-login {
+    background: #514869;
+    transition: all 300ms ease-in-out;
+}
+
+.light-mode-toggler div{
+    width: 12px;
+    right: 12px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 300ms ease-in-out;
+}
+
+#light-mode-input:checked ~ .light-mode-toggler{
+    background:#b8cad4 ;
+    transition: all 300ms ease-in-out;
+}
+
+#light-mode-input:checked ~.dark-mode-toogler div{
+    background:#ccc;
+}
+
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+    .left-login > h1{
+        display: none;
+    }
+    .left-login{
+        width: 100%;
+        height: auto;
+
+    }
+    .right-login{
+        width: 100%;
+        height: auto;
+
+    }
+
+    .left-login-image{
+        width: 80vw;
+    }
+
+    .card-login{
+        width: 90%;
+    }
+}
+
+.main-cadastro {
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+}
+
+.left-cadastroS{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.left-cadastro{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-cadastro >h1 {
+    color: #77ffc0;
+    font-size: 3vw;
+}
+
+.left-login-image{
+    width: 30vw;
+}
+
+.right-cadastro{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-cadastro{
+    color: #00ff88;
+}
+
+.card-cadastro{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #273339;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+  
+
+.card-cadastro > h1{
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+}
+
+.textfieldcadastro{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.textfieldcadastro > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #273339;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+.textfieldcadastro > label{
+    color: #f0ffffde;
+    margin-bottom: 10px;
+    margin: 10px 0px;
+}
+
+.textfieldcadastro > input::placeholder{
+    color: #f0ffff94;
+
+}
+
+.btn-cadastro{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px 12px #00ff8052;
+
+}
+
+a {
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0px;
+  
+}
+
+@media only screen and (max-width: 950px){
+    .card-cadastro{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-cadastro{
+        flex-direction: column;
+    }
+    .left-cadastro > h1{
+        display: none;
+    }
+    .left-cadastro{
+        width: 100%;
+        height: auto;
+
+    }
+    .right-cadastro{
+        width: 100%;
+        height: auto;
+
+    }
+
+    .left-login-image{
+        width: 80vw;
+    }
+
+    .card-cadastro{
+        width: 90%;
+    }
+
+}
+
+#light-mode-input{
+    display: none;
+}
+
+.light-mode-toggler{
+    position: absolute;
+    width: 38px;
+    height: 20px;
+    background: #2f2842;
+    border: 2px solid #110b1340;
+    border-radius: 15px;
+    right: 10px;
+    transition: all 300ms ease-in-out;
+}
+
+#light-mode-input:checked ~ .main-cadastro {
+    background-color: #201b2b;
+    transition: all 300ms ease-in-out;
+}
+
+.light-mode-toggler div{
+    width: 12px;
+    right: 12px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 300ms ease-in-out;
+}
+
+#light-mode-input:checked ~ .light-mode-toggler{
+    background:#b8cad4 ;
+    transition: all 300ms ease-in-out;
+}
+
+#light-mode-input:checked ~.dark-mode-toogler div{
+    background:#ccc;
+}

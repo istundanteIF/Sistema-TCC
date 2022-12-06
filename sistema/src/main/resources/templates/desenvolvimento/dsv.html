@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Desenvolvimento</title>
+	<link rel="stylesheet" type="text/css" href="../css/dsv/dsv.css">
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,-25" />
+</head>
+<body>
+	<div class="header-content">
+		<header class="main-header">
+			<div class="main-header-logo">
+				<a href="/"><img src="../images/header/thesis-logo.png" width="135px" height="30px"></a>
+			</div>
+			<nav class="main-navbar">
+				<a class="link" href="/dados">Dados do Projeto</a>
+				<a class="link" href="/projetos">Desenvolvimento</a>
+				<a class="link" href="/literatura">Literatura</a>
+			</nav>
+			<div class="main-header-profile">
+				<span class="material-symbols-outlined">calendar_month</span>
+				<span class="material-symbols-outlined">notifications</span>
+				<img src="../images/header/profile-icon.png" width="30px" height="30px">
+			</div>
+		</header>
+	</div>
+	<div class="main-content">
+		<div>
+			<div class="content-ul">
+				<div class="content-list" title="Meus projetos" style="width: 100px; height: 38px;">Meus trabalhos</div>
+				<a  title="Criar projeto" class="content-list-link" href="/projetos/novo"><li class="content-list" id="content-list-add"><span class="material-symbols-outlined">add</span></li></a>
+			</div>
+			<div class="content-card">
+				<div class="card-project" th:each="dsv : ${dsv}">
+					<div class="card-project-bar"></div>
+					<div class="dropdown" style="display: inline;">
+						<a th:href="@{/projetos/deletar/{id}(id=${dsv.id})}" class="dropdown-button">
+							<span class="material-symbols-outlined">delete</span>
+						</a>
+					</div>
+					<header class="card-project-header">
+						<a title="Meu TCC" class="card-project-link" th:href="@{/projetos/{id}(id=${dsv.id})}">
+							<h2 title="Meu TCC" class="h2-card">
+								<span th:utext="${#strings.abbreviate(dsv.titulo, 20)}"></span>
+								<br>
+								<span class="span-card">TCC</span>
+							</h2>
+						</a>
+					</header>
+					<div class="card-project-body">
+						<a title="Ir para o projeto" class="card-project-link" th:href="@{/projetos/{id}(id=${dsv.id})}">
+							<div class="progress-bar">
+								<div class="progress-bar-color" style="width: 100%;"></div>
+								<div class="progress-text" id="done" style="width: 100%;">Etapas concluídas</div>
+								<div class="progress-text" id="pending" style="width: 100%;">Etapas pendentes</div>
+							</div>
+							<hr>
+							<p class="project-body-text">Faltam <strong>--</strong> dias para entregar o projeto.<br>Entrega prevista para o dia --<strong><span></span></strong></p>
+							<p class="project-body-autor"><span class="project-body-autor-lb">AUTOR: </span><span th:text="${dsv.autor}"></span></p>
+							<p class="project-body-orientador"><span class="project-body-orientador-lb">ORIENTADOR: </span><span th:text="${dsv.orientador}"></span></p>
+						</a>
+					</div>
+					<a title="Ir para o projeto" th:href="@{/projetos/{id}(id=${dsv.id})}">
+						<footer class="project-card-footer">
+							<div class="project-card-info">
+								<span class="project-card-lb">Última edição, <span th:text="${#dates.format(dsv.data, 'yyyy-MM-dd')}"></span></span>
+							</div>
+						</footer>
+						<div class="card-project-bar"></div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

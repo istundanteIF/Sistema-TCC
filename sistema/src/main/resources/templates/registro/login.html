@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sign-page.css">
+    <title>Login</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <input type="checkbox" id="light-mode-input" />
+    <label  class="light-mode-toggler" for="light-mode-input">
+        <div></div>
+    </label>
+
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça Login ou Cadastre-se<br>E esteja a um passo do seu TCC</h1>
+            <img src="images/tcc-animacao(1).svg" class="left-login-image" alt=" tcc animação">
+        </div>
+        <div class="right-login">
+            <form class="card-login" method="post" action="/logar">
+                <h1>Login</h1>
+                <div th:if="${error != null}" class="alert" style="color: #e75073;">
+                	<span class="fas fa-exclamation-circle"></span>
+                	<span th:text="${error}"class="msg"></span>
+                </div>
+                <div class="textfield">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com...">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Senha...">
+                </div>
+                <button class="btn-login">Login</button>
+                <div class="link-cadastro">
+                 	<a href="/cadastro" target="_self">Caso não tenha login cadastre-se aqui</a>
+                </div>
+			</form>
+        </div>
+    </div>
+</body>
+</html>

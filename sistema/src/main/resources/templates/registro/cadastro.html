@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sistema de Gerenciamento de TCC</title>
+	<link rel="stylesheet" href="css/sign-page.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<input type="checkbox" id="light-mode-input" />
+    <label  class="light-mode-toggler" for="light-mode-input">
+        <div></div>
+    </label>
+    
+	<div class="main-login">
+		<div class="left-login">
+            <h1>Entre ou Cadastre-se<br>E esteja a um passo do seu TCC</h1>
+            <img src="images/tcc-animacao(1).svg" class="left-login-image" alt=" tcc animação">
+        </div>
+        <div class="right-login">
+            <form class="card-login" method="post" action="/cadastrar">
+                <h1>Cadastre-se</h1>
+                <div th:if="${error != null}" class="alert" style="color: #e75073;">
+                	<span class="fas fa-exclamation-circle"></span>
+                	<span th:text="${error}"class="msg"></span>
+                </div>
+                <div class="textfield">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+                <div class="textfield">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com...">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Senha...">
+                </div>
+                <div style="color: white; padding-top: 10px;">
+                	<input type="radio" id="cargo" name="cargo" value="orientando">Orientando
+                	<input type="radio" id="cargo" name="cargo" value="orientador">Orientador
+                </div>
+                <button class="btn-login">Cadastrar</button>
+				<div class="link-cadastro">
+         			<a href="/login" target="_self">Caso já tenha login clique aqui</a>
+        		</div>
+            </form>
+        </div>
+	</div>
+</body>
+</html>

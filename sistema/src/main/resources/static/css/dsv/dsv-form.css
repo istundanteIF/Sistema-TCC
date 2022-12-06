@@ -1,0 +1,65 @@
+/* Content */
+div.editor-content {
+    padding: 20px;
+	display: block;
+	align-items: center;
+	flex-direction: column;
+}
+
+.pdf-view {
+	width: 21cm;
+	height: 29.7cm;
+	margin: 0 auto;
+  	margin-bottom: 0.5cm;
+  	padding: 3cm calc(2cm - 10px) 2cm calc(3cm - 10px);
+	background-color: #ffffff;
+	text-align: center;
+	font-family: Arial;
+    font-size: 12pt;
+    line-height: 1.5;
+	box-shadow: 0 1px 4px rgb(0 0 0 / 40%);
+}
+
+.pdf-page {
+	position: relative;
+}
+
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.autor {
+	top: 290px;
+	width: 100%;
+	margin-bottom: 10px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	position: absolute;
+}
+
+.autor .university-input {
+	width: 606.05px !important;
+}
+
+.titulo {
+	position: absolute;
+	top: 560px;
+	width: 100%;
+}
+
+.cidade {
+	position: absolute;
+    top: 900px;
+    width: 100%;
+}
+
+.university-input {
+	width: 100%;
+	height: 24px;
+	border: 1px dashed #9e9e9e;
+    cursor: text;
+    resize: none;
+    text-align: center;
+    text-transform: uppercase;
+}
